@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeReader.ZebraMC3300ax.View.ReadBarcodeView">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray" Padding="10">
+            <Label FontSize="16" Padding="0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Total Itens: " FontAttributes="Bold" FontSize="16"/>
+                            <Span Text="{Binding Total}"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <CollectionView 
+                ItemsSource="{Binding Itens}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame 
+                           Padding="5,10"
+                           Margin="0"
+                           CornerRadius="10"
+                           BackgroundColor="White"
+                           BorderColor="Transparent"
+                           HasShadow="True">
+                            <StackLayout>
+                                <Label Text="{Binding Barcode}"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"/>
+                                <Label Text="{Binding Item}"
+                                    FontSize="Medium"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

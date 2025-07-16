@@ -128,5 +128,5 @@ MessagingCenter.Subscribe<object, string>(this, "BarcodeScanned", (sender, barco
 ---
 
 ## 🧰 Recursos úteis
-[Documentação oficial do DataWedge (Zebra)](https://techdocs.zebra.com/datawedge/latest/)
-[Zebra DataWedge Intent API](https://techdocs.zebra.com/datawedge/latest/guide/api/)
+- [Documentação oficial do DataWedge (Zebra)](https://techdocs.zebra.com/datawedge/latest/)
+- [Zebra DataWedge Intent API](https://techdocs.zebra.com/datawedge/latest/guide/api/)
